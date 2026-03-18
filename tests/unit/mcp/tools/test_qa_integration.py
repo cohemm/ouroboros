@@ -46,7 +46,7 @@ metadata:
 """
 
 # Fake QA result that QAHandler.handle() would return
-FAKE_QA_RESULT = Result.ok(
+FAKE_QA_RESULT: Result = Result.ok(
     MCPToolResult(
         content=(
             MCPContentItem(
@@ -222,7 +222,7 @@ class TestExecuteSeedHandlerQA:
 
         from ouroboros.mcp.errors import MCPToolError
 
-        qa_error = Result.err(MCPToolError("LLM failed", tool_name="ouroboros_qa"))
+        qa_error: Result = Result.err(MCPToolError("LLM failed", tool_name="ouroboros_qa"))
 
         with (
             patch("ouroboros.mcp.tools.definitions.ClaudeAgentAdapter"),
@@ -277,7 +277,7 @@ class FakeEvalSummary:
     score = 0.90
     drift_score = 0.05
     failure_reason = None
-    ac_results = []
+    ac_results: list[str] = []
 
 
 class FakeGeneration:

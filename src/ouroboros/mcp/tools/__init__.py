@@ -7,6 +7,7 @@ Public API:
     Tool definitions for Ouroboros functionality
 """
 
+from ouroboros.mcp.tools.brownfield_handler import BrownfieldHandler
 from ouroboros.mcp.tools.definitions import (
     OUROBOROS_TOOLS,
     CancelJobHandler,
@@ -36,6 +37,7 @@ from ouroboros.mcp.tools.registry import ToolRegistry
 __all__ = [
     "ToolRegistry",
     "OUROBOROS_TOOLS",
+    "BrownfieldHandler",
     "CancelJobHandler",
     "EvolveRewindHandler",
     "EvolveStepHandler",

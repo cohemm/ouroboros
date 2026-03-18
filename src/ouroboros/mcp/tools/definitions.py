@@ -3495,6 +3495,7 @@ def evolve_rewind_handler() -> EvolveRewindHandler:
 
 
 # List of all Ouroboros tools for registration
+from ouroboros.mcp.tools.brownfield_handler import BrownfieldHandler  # noqa: E402
 from ouroboros.mcp.tools.qa import QAHandler  # noqa: E402
 
 OUROBOROS_TOOLS: tuple[
@@ -3516,6 +3517,7 @@ OUROBOROS_TOOLS: tuple[
     | LineageStatusHandler
     | EvolveRewindHandler
     | CancelExecutionHandler
+    | BrownfieldHandler
     | QAHandler,
     ...,
 ] = (
@@ -3537,5 +3539,6 @@ OUROBOROS_TOOLS: tuple[
     LineageStatusHandler(),
     EvolveRewindHandler(),
     CancelExecutionHandler(),
+    BrownfieldHandler(),
     QAHandler(),
 )

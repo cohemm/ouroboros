@@ -550,6 +550,7 @@ def create_ouroboros_server(
         PipelineConfig,
     )
     from ouroboros.mcp.job_manager import JobManager
+    from ouroboros.mcp.tools.brownfield_handler import BrownfieldHandler
     from ouroboros.mcp.tools.definitions import (
         ACDashboardHandler,
         CancelExecutionHandler,
@@ -571,7 +572,6 @@ def create_ouroboros_server(
         StartEvolveStepHandler,
         StartExecuteSeedHandler,
     )
-    from ouroboros.mcp.tools.brownfield_handler import BrownfieldHandler
     from ouroboros.mcp.tools.pm_handler import PMInterviewHandler
     from ouroboros.mcp.tools.qa import QAHandler
     from ouroboros.mcp.tools.registry import ToolRegistry
